@@ -2,13 +2,23 @@
 <!-- 声明文档类型为HTML5，浏览器会按照HTML5标准解析页面 -->
 <html lang="zh-CN">
 <!-- html根标签，lang设置页面语言为中文 -->
+     <!-- 关联PWA配置文件 -->
+     <link rel="manifest" href="manifest.json">
+     <!-- 注册Service Worker -->
+     <script>
+       if ('serviceWorker' in navigator) {
+         window.addEventListener('load', () => {
+           navigator.serviceWorker.register('sw.js');
+         });
+       }
+     </script>
 <head>
     <!-- 头部区域，存放页面配置、样式，不会直接显示在页面上 -->
     <meta charset="UTF-8">
     <!-- 设置文字编码为UTF-8，防止中文出现乱码 -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- 适配手机屏幕，让网页在手机正常显示，不缩放错乱 -->
-    <title>张三 - 个人名片</title>
+    <title>小狐狸 - 个人名片</title>
     <!-- 浏览器标签上显示的标题文字 -->
     <style>
         /* CSS样式区域，用来控制页面所有元素的外观、位置、颜色 */
