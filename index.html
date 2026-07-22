@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<!-- 声明文档类型为HTML5，浏览器会按照HTML5标准解析页面 -->
+<html lang="zh-CN">
+<!-- html根标签，lang设置页面语言为中文 -->
+<head>
+    <!-- 头部区域，存放页面配置、样式，不会直接显示在页面上 -->
+    <meta charset="UTF-8">
+    <!-- 设置文字编码为UTF-8，防止中文出现乱码 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- 适配手机屏幕，让网页在手机正常显示，不缩放错乱 -->
+    <title>张三 - 个人名片</title>
+    <!-- 浏览器标签上显示的标题文字 -->
+    <style>
+        /* CSS样式区域，用来控制页面所有元素的外观、位置、颜色 */
+        * {
+            margin: 0;
+            /* 清除所有元素默认外边距 */
+            padding: 0;
+            /* 清除所有元素默认内边距 */
+            box-sizing: border-box;
+            /* 统一盒子计算规则，内边距不会撑大盒子宽度 */
+        }
+
+        body {
+            min-height: 100vh;
+            /* 页面最小高度占满整个浏览器可视区域高度 */
+            background-color: #f0f2f5;
+            /* 页面背景浅灰色，衬托白色名片 */
+            /* 下面三行实现卡片水平+垂直居中 */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: "Microsoft YaHei", sans-serif;
+            /* 设置全局字体，优先微软雅黑 */
+        }
+
+        .card {
+            width: 360px;
+            /* 名片卡片宽度 */
+            padding: 50px 30px;
+            /* 卡片内部上下、左右留白 */
+            background-color: #ffffff;
+            /* 卡片底色白色 */
+            border-radius: 16px;
+            /* 圆角大小，数值越大圆角越明显 */
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+            /* 卡片阴影，营造悬浮立体效果 */
+            text-align: center;
+            /* 卡片内部所有文字居中对齐 */
+        }
+
+        .name {
+            font-size: 28px;
+            /* 名字文字大小 */
+            color: #222222;
+            /* 名字文字深黑色 */
+            font-weight: bold;
+            /* 文字加粗 */
+            margin-bottom: 12px;
+            /* 和下方头衔拉开距离 */
+        }
+
+        .title {
+            font-size: 16px;
+            /* 头衔文字大小 */
+            color: #666666;
+            /* 头衔灰色文字 */
+            margin-bottom: 36px;
+            /* 和下方按钮拉开较大间距 */
+        }
+
+        .contact-btn {
+            display: inline-block;
+            /* 按钮支持设置宽高边距 */
+            padding: 12px 32px;
+            /* 按钮内部上下左右内边距 */
+            background-color: #2563eb;
+            /* 按钮蓝色背景 */
+            color: #fff;
+            /* 按钮文字白色 */
+            text-decoration: none;
+            /* 去除a标签默认下划线 */
+            border-radius: 8px;
+            /* 按钮圆角 */
+            font-size: 16px;
+            transition: all 0.3s ease;
+            /* 设置过渡动画，鼠标悬浮变化更顺滑 */
+        }
+
+        /* 鼠标悬浮在按钮上时触发的样式 */
+        .contact-btn:hover {
+            background-color: #1d4ed8;
+            /* 悬浮后按钮颜色变深一点 */
+        }
+    </style>
+</head>
+<body>
+    <!-- 页面可见内容全部写在body里面 -->
+    <!-- 名片最外层容器 -->
+    <div class="card">
+        <!-- 姓名 -->
+        <div class="name">张三</div>
+        <!-- 职业头衔 -->
+        <div class="title">移动应用开发者</div>
+        <!-- 联系我按钮，#代表暂时空链接，你后续可以改成微信号/网址 -->
+        <a href="#" class="contact-btn">联系我</a>
+    </div>
+</body>
+</html>
